@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kim's Clothing Goods Inventory</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Kim's Clothing Goods</h1>
+        <p>Inventory Management System</p>
+
+    </header>
+
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section id="dashboardSection">
+
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Products</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Stock</h3>
+                    <p id="totalStock">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Low Stock</h3>
+                    <p id="lowStock">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Add Product -->
+
+        <section id="addProductSection">
+
+            <h2>Add Product</h2>
+
+            <form id="inventoryForm">
+
+                <input type="hidden" id="editProductID">
+
+                <label>Product Name</label>
+                <input type="text" id="productName" required>
+
+                <label>Category</label>
+                <select id="category">
+                    <option>Tops</option>
+                    <option>Pants</option>
+                    <option>Shorts</option>
+                    <option>Jackets</option>
+                    <option>Accessories</option>
+                </select>
+
+                <label>Size</label>
+                <select id="size">
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <label>Color</label>
+                <input type="text" id="color">
+
+                <label>Price</label>
+                <input type="number" id="price">
+
+                <label>Stock Quantity</label>
+                <input type="number" id="stock">
+
+                <label>Supplier</label>
+                <input type="text" id="supplier">
+
+                <button type="submit" id="submitBtn">
+                    Add Product
+                </button>
+
+            </form>
+
+
+
+        </section>
+
+        <!-- Inventory Table -->
+
+        <section id="inventorySection">
+
+            <h2>Inventory</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Supplier</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="inventoryTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
