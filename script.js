@@ -3,22 +3,17 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyQKdNQL7w2YBuFjZFqC
 const form = document.getElementById("inventoryForm");
 const submitBtn = document.getElementById("submitBtn");
 
-// Stores the Product ID while editing
 let editingProductID = "";
 
 loadInventory();
 
 
-// =========================
-// ADD / UPDATE PRODUCT
-// =========================
 form.addEventListener("submit", function (e) {
 
     e.preventDefault();
 
     const formData = new FormData();
 
-    // Determine whether we're adding or updating
     if (editingProductID === "") {
         formData.append("action", "add");
     } else {
