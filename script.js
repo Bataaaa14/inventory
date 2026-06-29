@@ -63,9 +63,6 @@ form.addEventListener("submit", function (e) {
 });
 
 
-// =========================
-// LOAD INVENTORY
-// =========================
 function loadInventory() {
 
     fetch(SCRIPT_URL)
@@ -122,9 +119,6 @@ function loadInventory() {
 }
 
 
-// =========================
-// DELETE PRODUCT
-// =========================
 function deleteProduct(productID) {
 
     if (!confirm("Are you sure you want to delete this product?")) {
@@ -159,9 +153,6 @@ function deleteProduct(productID) {
 }
 
 
-// =========================
-// EDIT PRODUCT
-// =========================
 function editProduct(productID) {
 
     const product = window.inventoryData.find(p => p.productID === productID);
